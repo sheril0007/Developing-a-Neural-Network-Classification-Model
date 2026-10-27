@@ -1,8 +1,8 @@
 # Developing a Neural Network Classification Model
 
-### Name: NITHISH KUMAR S
+### Name: SHERIL.P
 
-### Register Number:212224230190
+### Register Number:212225230262
 
 ## AIM
 To develop a neural network classification model for the given dataset.
@@ -71,30 +71,30 @@ import matplotlib.pyplot as plt
 df=pd.read_csv("C:\\Users\\varal\\Downloads\\Deep Learning\\Deep Learning\\customers.csv")
 df
 ```
-<img width="1287" height="396" alt="image" src="https://github.com/user-attachments/assets/b0bfe53d-0fe1-4d2a-a2a9-fb1fc38cb706" />
+<img width="1331" height="457" alt="image" src="https://github.com/user-attachments/assets/4edae1d4-156f-44f9-82a5-d31ab39d4603" />
 
 ```
 df=df.drop(columns=["ID"])
 df
 ```
 
-<img width="1221" height="427" alt="image" src="https://github.com/user-attachments/assets/bbb25a7c-2267-44e6-8bdf-62b7e0c3d220" />
+<img width="1291" height="462" alt="image" src="https://github.com/user-attachments/assets/28224ca4-e0c4-402c-a6ce-a07f523bb2ec" />
+
 
 ```
 df.columns
 ```
-<img width="740" height="165" alt="image" src="https://github.com/user-attachments/assets/4ea3ea89-36fc-47c6-955e-9947399346d5" />
+<img width="932" height="122" alt="image" src="https://github.com/user-attachments/assets/1a4bc643-1558-47f1-8f38-b1e051f8dcaf" />
+
 
 ```
-df.columns
 ```
-<img width="810" height="130" alt="image" src="https://github.com/user-attachments/assets/a1ab6b8e-b2d6-4823-a288-7e02283b22cf" />
-
 ```
 df.fillna({"Work_Experience":0,"Family_Size":df["Family_Size"].median()},inplace=True)
 df
 ```
-<img width="1201" height="415" alt="image" src="https://github.com/user-attachments/assets/0dcd5ffa-a6e7-4e89-8238-6d492c58312a" />
+<img width="1438" height="460" alt="image" src="https://github.com/user-attachments/assets/ec1ec6d5-4d47-473b-99ac-a8c3146ac652" />
+
 
 ```
 cat_columns=['Gender','Ever_Married', 'Graduated', 'Profession',
@@ -108,7 +108,8 @@ lbe=LabelEncoder()
 df["Segmentation"]=lbe.fit_transform(df["Segmentation"])
 df
 ```
-<img width="1242" height="443" alt="image" src="https://github.com/user-attachments/assets/1cf617d4-2342-4215-877e-79c87927127c" />
+<img width="1282" height="455" alt="image" src="https://github.com/user-attachments/assets/080fd711-675f-42ed-9948-6076ae8fbbf5" />
+
 
 
 ```
@@ -171,7 +172,8 @@ for i in range(epochs):
     if i%10==0:
         print(f"Loss:{i}/{epochs}",loss.item())
 ```
-<img width="422" height="262" alt="image" src="https://github.com/user-attachments/assets/bfb80a69-2594-482d-beac-90b20e94aa3a" />
+<img width="592" height="266" alt="image" src="https://github.com/user-attachments/assets/d16aeaf2-6129-4598-92e9-f92f9edd3287" />
+
 
 ```
 pre=[]
@@ -183,7 +185,8 @@ with torch.no_grad():
     act.extend(yst.numpy())
     print(act,pre)
 ```
-<img width="1747" height="80" alt="image" src="https://github.com/user-attachments/assets/e9bdd7ce-4d17-49ba-8788-b32490a2f015" />
+<img width="1360" height="66" alt="image" src="https://github.com/user-attachments/assets/7bb33ce4-8b4b-4b02-aa71-ecc83749efa8" />
+
 
 
 ```
@@ -194,7 +197,8 @@ print("Accuracy:",accuracy)
 print("confusion_matrix:\n",conf_matrix)
 print("classification_report:\n",cl_report)
 ```
-<img width="696" height="440" alt="image" src="https://github.com/user-attachments/assets/f2d226d4-8a4a-4713-ba39-7871ed6433e3" />
+<img width="880" height="430" alt="image" src="https://github.com/user-attachments/assets/b7383a50-708c-4ec8-95b0-2fb50d4c6ebe" />
+
 
 
 ```
@@ -208,22 +212,26 @@ plt.title("Confusion Matrix")
 plt.show()
 ```
 
-<img width="672" height="576" alt="image" src="https://github.com/user-attachments/assets/9ae61567-6a8f-4e6c-b079-f2ec0053d224" />
+<img width="998" height="577" alt="image" src="https://github.com/user-attachments/assets/667b96f7-f1bf-4e03-8af8-08fea6dc73d8" />
+
 
 
 
 ### Dataset Information
-<img width="1331" height="432" alt="image" src="https://github.com/user-attachments/assets/5bbb1ad9-c1d8-4eb8-941d-5cda7275bea2" />
+<img width="1362" height="471" alt="image" src="https://github.com/user-attachments/assets/64dddf1f-93b1-4b09-9f2d-c4948b199eed" />
+
 
 
 ### OUTPUT
 
 ## Confusion Matrix
 
-<img width="672" height="576" alt="image" src="https://github.com/user-attachments/assets/9ae61567-6a8f-4e6c-b079-f2ec0053d224" />
+<img width="1058" height="576" alt="image" src="https://github.com/user-attachments/assets/f552e9eb-267d-446e-bea0-abf99d8d82a3" />
+
 
 ## Classification Report
-<img width="696" height="440" alt="image" src="https://github.com/user-attachments/assets/f2d226d4-8a4a-4713-ba39-7871ed6433e3" />
+<img width="962" height="428" alt="image" src="https://github.com/user-attachments/assets/3a2e0781-31e8-4e58-bf45-9f35bcc4883d" />
+
 
 
 ## RESULT
